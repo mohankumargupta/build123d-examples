@@ -1,4 +1,7 @@
+#%%
+
 from build123d import *
+from ocp_vscode import show_all, show_object, Camera
 
 length = 100.0
 width = 60
@@ -16,5 +19,10 @@ with BuildPart() as builder:
     extrude(amount=-notch_depth, mode=Mode.SUBTRACT)
     split(bisect_by=Plane.XZ)
     mirror(about=Plane.XZ)
-    
-builder.part
+
+show_all()
+#show_all(axes=True, axes)
+#show_object(reset_camera=Camera.KEEP)
+
+
+# %%

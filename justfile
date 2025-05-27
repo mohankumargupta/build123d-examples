@@ -6,7 +6,7 @@ all arg:
 	just to_ocpvscode {{ arg }}
 
 to_jupyter arg:
-	just 
+	python scripts/to_jupyter.py {{arg}}
 
 to_ocpvscode arg:
 	just
