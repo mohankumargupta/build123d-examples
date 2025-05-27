@@ -1,9 +1,8 @@
 set shell := ["sh", "-c"]
 set windows-shell := ["powershell", "-c"]
 
-all arg:
-	just to_jupyter {{ arg }}
-	just to_ocpvscode {{ arg }}
+@_default:
+	just --list
 
 to_jupyter arg:
 	python scripts/to_jupyter.py {{arg}}
