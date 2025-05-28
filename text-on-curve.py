@@ -1,3 +1,5 @@
+# %%
+
 from build123d import *
 from ocp_vscode import show_all, show_object
 
@@ -13,7 +15,7 @@ r1 = 80
 
 with BuildPart() as my_part:
     Cylinder(radius=r2, height=height, align=(Align.CENTER, Align.CENTER, Align.CENTER))
-    top_face = my_part.faces().sort_by(Axis.Z)[-1]
+    top_face = my_part.faces().sort_by(Axis.Z).last
 
     with BuildSketch(top_face, mode=Mode.PRIVATE) as circle:
        Circle(r1)
