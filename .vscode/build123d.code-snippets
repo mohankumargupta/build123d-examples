@@ -1,0 +1,18 @@
+{
+    "b123d": {
+        "scope": "python",
+        "prefix": "b123d",
+        "body": [
+"#%%",
+"",
+"from build123d import *",
+"from ocp_vscode import show_all",
+"",
+"with BuildPart() as builder:",
+"    Box(10,10,10)",
+"",
+"show_all()",
+""
+        ]
+    }
+}
