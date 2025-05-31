@@ -3,14 +3,18 @@
 from build123d import *
 from ocp_vscode import show, show_object, Camera
 
+def createText(items: list[str], space_around_words: int):
+  return ' ' * space_around_words + (' ' * space_around_words).join(items)
+
 # Parameters(mm)
 
 height = 3
 emboss_depth = 1.5
 font_size = 18
 font = "Arial"
-inner_ring_text = "MON              TUE            WED         THU            FRI             SAT                SUN"
 
+inner_ring_days = ["MON","TUE","WED","THU","FRI","SAT","SUN"]
+inner_ring_text = createText(inner_ring_days, 13)
 
 # Radius and Diameters(mm)
 
@@ -35,6 +39,7 @@ outer_ring_inner_radius = outer_ring_inner_diameter / 2
 
 class Ring(BasePartObject):
   def __init__(self, outer_radius: float, inner_radius: float, text: str):
+
     with BuildPart() as ring_builder:
       Cylinder(outer_radius, height)
       top_face = ring_builder.faces().sort_by(Axis.Z).last
@@ -61,3 +66,4 @@ with BuildPart() as builder:
   #Ring(inner_ring_outer_radius=112.4, inner_radius=79, text=inner_ring_text)
 
 show(builder, reset_camera=Camera.KEEP)
+
