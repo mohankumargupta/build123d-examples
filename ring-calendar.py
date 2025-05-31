@@ -10,17 +10,17 @@ def createText(items: list[str], space_around_words: int):
 
 height = 3
 emboss_depth = 1.5
-font_size = 18
+font_size = 12
 font = "Arial"
 
 inner_ring_days = ["MON","TUE","WED","THU","FRI","SAT","SUN"]
-inner_ring_text = createText(inner_ring_days, 1)
+inner_ring_text = createText(inner_ring_days, 5)
 
 middle_ring_days = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"]
-middle_ring_text = createText(middle_ring_days, 1)
+middle_ring_text = createText(middle_ring_days, 5)
 
 outer_ring_days = [str(i+1) for i in range(31)]
-outer_ring_text = createText(outer_ring_days, 1)
+outer_ring_text = createText(outer_ring_days, 3)
 
 # Radius and Diameters(mm)
 (250.4,217.6),(181.8,148.4),(112.4,79)
