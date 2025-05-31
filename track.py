@@ -1,7 +1,7 @@
 # %%
 
 from build123d import *
-from ocp_vscode import show_all, Camera
+from ocp_vscode import show_all, show_object, Camera
 
 # Parameters(mm)
 
@@ -47,9 +47,27 @@ with BuildPart() as builder:
       Tube(short_tube_length)
     split(bisect_by=Plane.YZ, keep=Keep.BOTTOM)
     mirror(about=Plane.YZ)
+    
 
+    # edges = builder.edges()
+    # top_exterior_edge = top_face.outer_wire().edges()
+
+    # bottom_edges = edges.group_by(Axis.Z)[0]
+    # vertical_edges = edges.group_by(Axis.Z)[1]
+    # #top_interior_edges = builder.edges().group_by(Axis.Z)[2].filter_by(Edge.is_interior)
+    
+
+    # fillet(bottom_edges, radius=0.2)
+    # #fillet(vertical_edges, radius=0.0000001)
+
+    # fillet(top_exterior_edge, radius=0.2)
+
+
+    
+  
 
 show_all(reset_camera=Camera.KEEP)
+#show_object(builder, reset_camera=Camera.KEEP)
 # export_stl(builder.part, "track.stl")
 # export_step(builder.part, "track.step")
 
