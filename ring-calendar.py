@@ -1,7 +1,7 @@
 #%%
 
 from build123d import *
-from ocp_vscode import show, show_object, Camera
+from ocp_vscode import show, show_all, Camera
 
 def createText(items: list[str], space_around_words: int):
   return ' ' * space_around_words + (' ' * space_around_words).join(items)
@@ -23,10 +23,10 @@ outer_ring_days = [str(i+1) for i in range(31)]
 outer_ring_text = createText(outer_ring_days, 2)
 
 # Radius and Diameters(mm)
-
+(250.4,217.6),(181.8,148.4),(112.4,79)
 ## Inner ring
-inner_ring_outer_diameter = 250.4
-inner_ring_inner_diameter = 217.6
+inner_ring_outer_diameter = 112.4
+inner_ring_inner_diameter = 79
 inner_ring_outer_radius = inner_ring_outer_diameter / 2
 inner_ring_inner_radius = inner_ring_inner_diameter / 2
 
@@ -37,8 +37,8 @@ middle_ring_outer_radius = middle_ring_outer_diameter / 2
 middle_ring_inner_radius = middle_ring_inner_diameter / 2
 
 ## Outer ring
-outer_ring_outer_diameter = 112.4
-outer_ring_inner_diameter = 79
+outer_ring_outer_diameter = 250.4
+outer_ring_inner_diameter = 217.6
 outer_ring_outer_radius = outer_ring_outer_diameter / 2
 outer_ring_inner_radius = outer_ring_inner_diameter / 2
 
@@ -68,16 +68,17 @@ with BuildPart() as builder:
     inner_radius=inner_ring_inner_radius,
     text=inner_ring_text,
   )
-  # Ring(
-  #   outer_radius=middle_ring_outer_radius,
-  #   inner_radius=middle_ring_inner_radius,
-  #   text=middle_ring_text,
-  # )
+  Ring(
+    outer_radius=middle_ring_outer_radius,
+    inner_radius=middle_ring_inner_radius,
+    text=middle_ring_text,
+  )
   # Ring(
   #   outer_radius=outer_ring_outer_radius,
   #   inner_radius=outer_ring_inner_radius,
   #   text=outer_ring_text,
   # )    
   
+show_all( reset_camera=Camera.KEEP)
 show(builder, reset_camera=Camera.KEEP)
 
