@@ -16,6 +16,12 @@ font = "Arial"
 inner_ring_days = ["MON","TUE","WED","THU","FRI","SAT","SUN"]
 inner_ring_text = createText(inner_ring_days, 13)
 
+middle_ring_days = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"]
+middle_ring_text = createText(middle_ring_days, 5)
+
+outer_ring_days = [str(i+1) for i in range(31)]
+outer_ring_text = createText(outer_ring_days, 2)
+
 # Radius and Diameters(mm)
 
 ## Inner ring
@@ -29,7 +35,6 @@ middle_ring_outer_diameter = 181.8
 middle_ring_inner_diameter = 148.4
 middle_ring_outer_radius = middle_ring_outer_diameter / 2
 middle_ring_inner_radius = middle_ring_inner_diameter / 2
-
 
 ## Outer ring
 outer_ring_outer_diameter = 112.4
@@ -63,7 +68,16 @@ with BuildPart() as builder:
     inner_radius=inner_ring_inner_radius,
     text=inner_ring_text,
   )
-  #Ring(inner_ring_outer_radius=112.4, inner_radius=79, text=inner_ring_text)
-
+  # Ring(
+  #   outer_radius=middle_ring_outer_radius,
+  #   inner_radius=middle_ring_inner_radius,
+  #   text=middle_ring_text,
+  # )
+  # Ring(
+  #   outer_radius=outer_ring_outer_radius,
+  #   inner_radius=outer_ring_inner_radius,
+  #   text=outer_ring_text,
+  # )    
+  
 show(builder, reset_camera=Camera.KEEP)
 
