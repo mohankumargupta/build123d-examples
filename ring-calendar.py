@@ -82,3 +82,5 @@ with BuildPart() as builder:
 show_all( reset_camera=Camera.KEEP)
 #show(builder, reset_camera=Camera.KEEP)
 
+# export_stl(builder.part, file_path="ring-calendar.stl")
+# export_step(builder.part, file_path="ring-calendar.step")
