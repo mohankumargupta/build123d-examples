@@ -14,7 +14,7 @@ font_size = 12
 font = "Arial"
 
 inner_ring_days = ["MON","TUE","WED","THU","FRI","SAT","SUN"]
-inner_ring_text = createText(inner_ring_days, 5)
+inner_ring_text = createText(inner_ring_days, 6)
 
 middle_ring_days = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"]
 middle_ring_text = createText(middle_ring_days, 5)
