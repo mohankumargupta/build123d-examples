@@ -10,5 +10,4 @@ with BuildPart() as ex2:
     Box(length, width, thickness)
     Cylinder(radius=center_hole_dia / 2, height=thickness, mode=Mode.SUBTRACT)
 
-
 show_all()

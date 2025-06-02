@@ -6,11 +6,12 @@
 "#%%",
 "",
 "from build123d import *",
-"from ocp_vscode import show_all, Camera",
+"from ocp_vscode import show, show_all, Camera",
 "",
 "with BuildPart() as builder:",
 "    Box(10,10,10)",
 "",
+"show(builder, reset_camera=Camera.KEEP)",
 "show_all(reset_camera=Camera.KEEP)",
 ""
         ]
