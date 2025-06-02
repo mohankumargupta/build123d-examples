@@ -3,6 +3,7 @@
         "ms-python.python",
         "bernhard-42.ocp-cad-viewer",
         "ms-toolsai.jupyter",
-        "pucelle.run-on-save"
+        "pucelle.run-on-save",
+        "tamasfe.even-better-toml",
     ]
 }

@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "build123d-examples"
+version = "0.1.0"
+description = "Examples for build123d"
+requires-python = ">=3.10"
+dependencies = ["ocp_vscode", "build123d"]
+
+[tool.setuptools]
+py-modules = []
+
