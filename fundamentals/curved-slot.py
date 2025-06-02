@@ -16,6 +16,11 @@ with BuildPart() as builder:
         Rectangle(2*large_radius, 10)
         
     cir_edges = sketch1.edges().sort_by(Edge.length)[4:8]
+    with BuildSketch(top_face):
+        for i in range(4):
+            SlotArc(cir_edges[i], 5)
+    extrude(amount=-height, mode=Mode.SUBTRACT)
+
     print(len(cir_edges))
 #show(builder, reset_camera=Camera.KEEP)
 show_all(reset_camera=Camera.KEEP)
