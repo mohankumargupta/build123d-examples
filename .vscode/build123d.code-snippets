@@ -11,7 +11,7 @@
 "with BuildPart() as builder:",
 "    Box(10,10,10)",
 "",
-"show(builder, reset_camera=Camera.KEEP)",
+"#show(builder, reset_camera=Camera.KEEP)",
 "show_all(reset_camera=Camera.KEEP)",
 ""
         ]
