@@ -3,8 +3,6 @@
 from build123d import *
 from ocp_vscode import show, show_all, Camera
 
-
-
 # Parameters(mm)
 length = 160
 width = 80
@@ -20,10 +18,12 @@ large1_x = 0
 large1_y = 8
 
 # Radius and diameters(mm)
-small_radius = 3
+small_diameter = 6
+small_radius = small_diameter / 2
 medium_diameter = 31
 medium_radius = medium_diameter / 2
-large_radius = 26
+large_diameter = 52
+large_radius = large_diameter / 2
 
 # Main Part
 with BuildPart() as builder:
