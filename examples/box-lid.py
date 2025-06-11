@@ -31,9 +31,12 @@ with BuildPart() as builder:
             )
         make_face()
     sweep(path=rr.wire())
-
+    with BuildSketch(Plane.YZ) as sketch3:
+        with Locations((20.5,0)):
+            Rectangle(3, 30, align=(Align.MIN, Align.MIN))
+    extrude(amount=153.0/2, both=True)
 part = builder.part
 
-show(builder, sketch2, reset_camera=Camera.KEEP)
+show(builder, sketch3, reset_camera=Camera.KEEP)
 #show_all(reset_camera=Camera.KEEP)
-print(part.volume)
+#print(part.volume)
