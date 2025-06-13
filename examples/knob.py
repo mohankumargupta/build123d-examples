@@ -13,8 +13,12 @@ with BuildPart() as builder:
         with Locations((5, 10.4)):
             Circle(1, mode=Mode.SUBTRACT)
     revolve(axis=Axis.Z)
-        
-
+    rim_face = builder.faces().sort_by(Axis.Z)[-2]
+    rim = rim_face.outer_wire().edge()
+    chamfer(rim, 1)
 #show(sketch1, show_sketch_local=True ,reset_camera=Camera.KEEP)
 show(builder.part, reset_camera=Camera.KEEP)
+#show(rim_face, show_parent=True)
 #show_all(reset_camera=Camera.KEEP)
+
+

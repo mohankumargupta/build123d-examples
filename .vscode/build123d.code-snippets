@@ -13,6 +13,7 @@
 "",
 "#show(builder, reset_camera=Camera.KEEP)",
 "#show(sketch1, show_sketch_local=False ,reset_camera=Camera.KEEP)",
+"#show(top_face, show_parent=True)",
 "show_all(reset_camera=Camera.KEEP)",
 ""
         ]
