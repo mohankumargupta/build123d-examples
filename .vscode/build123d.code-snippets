@@ -12,6 +12,7 @@
 "    Box(10,10,10)",
 "",
 "#show(builder, reset_camera=Camera.KEEP)",
+"#show(sketch1, show_sketch_local=False ,reset_camera=Camera.KEEP)",
 "show_all(reset_camera=Camera.KEEP)",
 ""
         ]
