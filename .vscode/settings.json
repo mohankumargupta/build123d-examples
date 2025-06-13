@@ -1,3 +1,10 @@
 {
     "editor.minimap.enabled": false,
+    "runOnSave.commands": [
+        {
+        
+            "command": "jupyter.runcurrentcell",
+            "runIn": "vscode",
+        }
+    ],
 }
