@@ -4,6 +4,10 @@ set windows-shell := ["powershell", "-c"]
 @_default:
 	just --list
 
+venv:
+	uv venv --python 3.12
+	uv pip install pip
+
 install_pip:
 	pip install -U ocp_vscode
 

@@ -21,4 +21,8 @@ show(builder.part, reset_camera=Camera.KEEP)
 #show(rim_face, show_parent=True)
 #show_all(reset_camera=Camera.KEEP)
 
+#%%
+
+
+
 
