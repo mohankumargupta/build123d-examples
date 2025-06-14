@@ -25,11 +25,12 @@ with BuildPart() as builder:
             l3 = Line(l1@1,(p1.X, 0))
             Line(l3@1, l1@0)
         make_face()
-    revolve(axis=Axis.Z, mode=Mode.SUBTRACT)
+    
+    revolve(axis=Axis(origin=(-9,0), direction=(0,0,1)), mode=Mode.SUBTRACT)
         #IntersectingLine(l1@1, direction=(l2%1), other=l2)
         
 #show(sketch1, show_sketch_local=True ,reset_camera=Camera.KEEP)
-show(builder.part, sketch2, reset_camera=Camera.KEEP)
+show(builder.part, reset_camera=Camera.KEEP)
 #show(rim_face, show_parent=True)
 #show_all(reset_camera=Camera.KEEP)
      
