@@ -7,6 +7,7 @@ set windows-shell := ["powershell", "-c"]
 venv:
 	uv venv --python 3.12
 	uv pip install pip
+	uv sync
 
 install_pip:
 	pip install -U ocp_vscode
