@@ -21,8 +21,14 @@ show(builder.part, reset_camera=Camera.KEEP)
 #show(rim_face, show_parent=True)
 #show_all(reset_camera=Camera.KEEP)
 
-#%%
+#%% [markdown]
+"""
+![knob1](https://cdn.jsdelivr.net/gh/mohankumargupta/build123d-examples/images/knob1.jpg)
 
+![knob2](https://cdn.jsdelivr.net/gh/mohankumargupta/build123d-examples/images/knob2.jpg)
+
+![knob3](https://cdn.jsdelivr.net/gh/mohankumargupta/build123d-examples/images/knob3.jpg)
+"""
 
 
 
