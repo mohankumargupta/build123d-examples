@@ -7,7 +7,7 @@ name = "build123d-examples"
 version = "0.1.0"
 description = "Examples for build123d"
 requires-python = ">=3.10"
-dependencies = ["ocp_vscode", "build123d"]
+dependencies = ["ocp_vscode", "build123d @ git+https://github.com/gumyr/build123d.git"]
 
 [tool.setuptools]
 py-modules = []
